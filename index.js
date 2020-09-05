@@ -4,7 +4,11 @@ const createElement = (tag, attrs, ...children) => {
         el.setAttribute(attr, attrs[attr]);
     }
     children.forEach(child => {
-        el.appendChild(child);
+        let node = child;
+        if(typeof child === 'string') {
+            node = document.createTextNode(child);
+        }
+        el.appendChild(node);
     });
     return el;
 };
@@ -15,6 +19,6 @@ const render = (dom) => {
 
 
 render(<div>
-    <div></div>
+    <div style="color:red;">123</div>
     <p></p>
 </div>);
