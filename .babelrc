@@ -1,4 +1,4 @@
 {
     "presets": ["@babel/preset-env"],
-    "plugins": [["@babel/plugin-transform-react-jsx", { "pragma": "abp" }]]
+    "plugins": [["@babel/plugin-transform-react-jsx", { "pragma": "createElement" }]]
 }
